@@ -1,5 +1,5 @@
 {
-    "connectionString": "mongodb://127.0.0.1:27017/sample",
+    "connectionString": "mongodb://lthompson:comp895@ds219308.mlab.com:19308/contact_mlab",
     "apiUrl": "http://localhost:8080",
     "secret": "thompy"
 }
