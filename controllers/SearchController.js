@@ -1,17 +1,7 @@
-var mongoose = require('mongoose');
-var express = require('express');
-var app = express();
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://lawrencethomp:dryboy88@ds143201.mlab.com:43201/";
-var router = express.Router();
-var bodyParser = require('body-parser');
-
 var Contact = require('../Contact');
 
 const search = (req, res) => {
 
-    console.log(req.body);
-    console.log('backend');
     var query = {};
     if (req.body.firstName) {
         query.firstName = req.body.firstName
