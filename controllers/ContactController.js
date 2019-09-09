@@ -49,7 +49,7 @@ const getContacts =  (req, res) => {
         }
         query.skip = size * (pageNo - 1);
         query.limit = size;
-    Contact.count({},function(err, totalCount){
+    Contact.countDocuments({},function(err, totalCount){
         if(err) {
             response = {
                 "error" : true,
@@ -74,7 +74,6 @@ const getContacts =  (req, res) => {
     })
 }
 
-// TODO: (node:22780) DeprecationWarning: collection.count is deprecated, and will be removed in a future version. Use collection.countDocuments or collection.estimatedDocumentCount instead
 // TODO: (node:22780) DeprecationWarning: Mongoose: `findOneAndUpdate()` and `findOneAndDelete()` without the `useFindAndModify` option set to false are deprecated. See: https://mongoosejs.com/docs/deprecations.html#-findandmodify-
 
 const getContact = (req, res) => {
